@@ -95,13 +95,13 @@
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < snake.length; i++) {
-        if (i === 0) ctx.drawImage(headImg, snake[i].x, snake[i].y, box, box);
+        if (i === 0) ctx.drawImage(headImg, snake[i].x, snake[i].y, 40, 40);
         else {
           ctx.fillStyle = '#0ff';
           ctx.fillRect(snake[i].x, snake[i].y, box, box);
         }
       }
-      ctx.drawImage(foodImg, food.x, food.y, box, box);
+      ctx.drawImage(foodImg, food.x, food.y, 25, 25);
 
       let headX = snake[0].x;
       let headY = snake[0].y;
